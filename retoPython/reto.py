@@ -24,4 +24,11 @@ for i in range(2, n+1):                   #En ciclo for variable i de un rango d
           new_file.write(str(i) + " Este numero es primo" + "\n") #conversion de string y texto 
 
 new_file.close()                          #Cerrar el archivo de texto con variable new_file.funcion close  
- 
+
+#-----------------------------------------Appened---"No borrar lo que se tiene en el archivo"-------------------------------
+new_file = open("results.txt", "a")       #Se cambia el parametro de "a"    
+
+new_file.write(" Desafio de Juan Alberto Cuevas 24/01/24 ")     #crea un nuevo string
+       
+new_file.close()                                                #cerrar el archivo
+#-----------------------------------------------------------------------
