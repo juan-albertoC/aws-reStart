@@ -32,3 +32,16 @@ new_file.write(" Desafio de Juan Alberto Cuevas 24/01/24 ")     #crea un nuevo s
        
 new_file.close()                                                #cerrar el archivo
 #-----------------------------------------------------------------------
+
+#-----------------------------------------Read file---------------------------------------------
+#new_file = open("results.txt", "r")       
+
+#print(new_file.read())                    #imprime con print y funcion read
+
+#new_file.close()
+
+with open("results.txt","r") as new_file:   #con with y la funcion open con parametros, palabra reservada as name_file u otro nombre nuevo
+  for lineas in new_file:                   #interactua en un for, variable lineas 
+     print(lineas)                          #print variable lineas
+     
+new_file.close()   
