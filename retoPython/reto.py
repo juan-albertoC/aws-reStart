@@ -1,7 +1,10 @@
 #Desafio de AWS Juan Alberto Cuevas Juarez
 #Programa muestra numeros primos de 1 hasta 250, combina condicionales if-else, bucles for-while
 
-#crete directorio de trabajo y archivo py, 
+#crete directorio de trabajo y archivos py, txt
+#create variable new_file
+
+new_file = open("results.txt", "w")       #Asignar funcion open con 2 parametros: archivo ubicacion local y palabra reservada "w" de write
 
 n = 250                                   # Opcion 1 variable n: numero maximo de primos
 #n = int(input("Indica numero maximo de primos")) # Opcion 2 Entrada por teclado con la funcion input para diferentes numeros maximos de primos
@@ -17,5 +20,8 @@ for i in range(2, n+1):                   #En ciclo for variable i de un rango d
            else:                          #es falso j incrementa en uno una iteracion
                  j += 1
                                           #Termina el while
-       if esPrimo:                        # si es verdadero entonces imprime
-          print(i + " Este numero es primo" + "\n") 
+       if esPrimo:                        # si es verdadero entonces imprime y escribe variable i en el archivo de texto
+          new_file.write(str(i) + " Este numero es primo" + "\n") #conversion de string y texto 
+
+new_file.close()                          #Cerrar el archivo de texto con variable new_file.funcion close  
+ 
